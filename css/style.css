@@ -1,0 +1,93 @@
+/* Imports */
+
+/* Simple CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+    --background: white;
+    --text: black;
+    --orange: #E98321;
+    --green: #34B233;
+    --magenta: #AC2973;
+    --light-blue: #0273CF;
+    --light-purple: #9C5FB5;
+    --dark-blue: #003591;
+}
+
+/* Basic Formatting */
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.fullscreen {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+/* Styles for Each Screen */
+
+#game {
+    background-color: var(--green);
+}
+
+#standby-screen {
+    background-color: var(--magenta);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about {
+    background-color: var(--dark-blue);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#game-rules {
+    width: 30vw;
+    height: 20vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background);
+}
+
+#fun-fact {
+    width: 40vw;
+    height: 20vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--background);
+}
+
+/* Hiding Screens */
+
+.hidden {
+    display: none !important; 
+}
