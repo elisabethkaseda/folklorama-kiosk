@@ -10,23 +10,25 @@
     <!-- Main Game Screen -->
     <section id="game" class="fullscreen">
         <div class="header-area">
-            <h1>Matching Game</h1>
+            <h1>Match <span class="subheader">the Flags</span></h1>
+            <div class="nav">
+                <span class="btn" onclick="showScreen('#standby-screen');">Back to Home</span>
+            </div>
         </div>
         <div class="card-area">
-            <p>Cards go here! :D</p>
         </div>
         <div class="footer-area">
-            <span class="btn" onclick="showScreen('#standby-screen');">Back to Home</span>
+            
         </div>
     </section>
 
     <!-- Popups for Game -->
-    <aside id="game-rules">
-        <div class="centered-info">
+    <!-- <aside id="game-rules hidden">
+        <div class="centered-info hidden">
             <h3>How to Play</h3>
             <span class="btn" onclick="hideOverlay(this);">Let's Play!</span>
         </div>
-    </aside>
+    </aside> -->
     <aside id="fun-fact hidden">
 
     </aside>
@@ -35,7 +37,7 @@
     </aside>
 
     <!-- Other Fullscreen Screens -->
-    <section id="standby-screen" class="fullscreen">
+    <!-- <section id="standby-screen" class="fullscreen hidden">
         <div class="centered-info">
             <h2>Match the Flags</h2>
             <p>Learn about countries and win a prize!</p>
@@ -46,7 +48,7 @@
         <div class="centered-info">
             <h2>About Folklorama</h2>
         </div>
-    </section>
+    </section> -->
 
     <script src="js/script.js"></script>
 </body>

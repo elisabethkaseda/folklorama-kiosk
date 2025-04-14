@@ -1,3 +1,59 @@
+// Game functionality
+// Taken from https://www.youtube.com/watch?v=xWdkt6KSirw
+
+const cardArea = document.querySelector('.card-area');
+let cards = [];
+let firstCard, secondCard;
+let lockBoard = false;
+let score = 0;
+
+fetch('../data/cards.json')
+    .then(
+        response => response.json()
+    )
+    .then(
+        data => {
+            cards = [...data, ...data];
+            shuffleCards();
+            generateCards();
+        }
+    );
+
+function shuffleCards() {
+    let currentIndex = cards.length,
+        randomIndex,
+        temporaryValue;
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = cards[currentIndex];
+        cards[currentIndex] = cards[randomIndex];
+        cards[randomIndex] = temporaryValue;
+    }
+}
+
+function generateCards() {
+    for (let card of cards) {
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('card');
+        cardElement.setAttribute('data-name', card.name);
+        cardElement.innerHTML = `
+            <div class="front">
+                <img class="flag-image" src=${card.image} />
+            </div>
+            <div class="back"></div>
+        `;
+        cardArea.appendChild(cardElement);
+        cardElement.addEventListener('click', flipCard);
+    }
+}
+
+function flipCard() {
+    if (lockBoard) return;
+    if (this === firstCard) return;
+}
+
+
 // Setting up container variables for other screens
 
 let standbyScreen = document.querySelector('#standby-screen');
