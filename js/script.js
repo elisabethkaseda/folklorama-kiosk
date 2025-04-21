@@ -51,6 +51,19 @@ function generateCards() {
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
+
+    this.classList.add("flipped");
+
+    if (!firstCard) {
+        firstCard = this;
+        return;
+    }
+
+    secondCard = this;
+    score++;
+    lockBoard = true;
+
+    checkForMatch();
 }
 
 

@@ -121,8 +121,8 @@ body {
 }
 
 .flag-image {
-    width: 80%;
-    height: auto;
+    width: auto;
+    height: 80%;
 }
 
 .card.flipped {
