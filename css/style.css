@@ -102,8 +102,7 @@ body {
 .card-area {
     display: grid;
     justify-content: center;
-    justify-items: center;
-    align-items: center;
+    align-content: center;
     gap: 0.5rem;
     grid-template-columns: repeat(6, 15%);
     grid-template-rows: repeat(3, 30%);
@@ -176,30 +175,17 @@ body {
     align-items: center;
 }
 
+/* Popups */
+
 #about {
-    background-color: var(--dark-blue);
+    width: 80vw;
+    height: 80vh;
     position: absolute;
     top: 0;
-    left: 0;
-}
-
-#game-rules {
-    width: 30vw;
-    height: 20vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--background);
-}
-
-#fun-fact {
-    width: 40vw;
-    height: 20vh;
-    position: absolute;
     bottom: 0;
+    left: 0;
     right: 0;
-    background-color: var(--background);
+    margin: auto;
 }
 
 /* Hiding Screens */

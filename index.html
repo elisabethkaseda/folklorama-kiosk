@@ -12,6 +12,7 @@
         <div class="header-area">
             <h1>Match <span class="subheader">the Flags</span></h1>
             <div class="nav">
+                <button id="open-about">About</button>
                 <span class="btn" onclick="showScreen('#standby-screen');">Back to Home</span>
             </div>
         </div>
@@ -22,24 +23,25 @@
         </div>
     </section>
 
-    <!-- Popups -->
-    <aside id="win-screen">
-
-    </aside>
+    <dialog id="about">
+        <div class="centered-info">
+            <p>logo</p>
+            <div>
+                <h2>About</h2>
+            </div>
+            <button id="close-about">Close</button>
+        </div>
+    </dialog>
 
     <!-- Fullscreen Standby -->
-    <!-- <section id="standby-screen" class="fullscreen hidden">
+     
+    <section id="standby-screen" class="fullscreen">
         <div class="centered-info">
             <h2>Match the Flags</h2>
             <p>Learn about countries and win a prize!</p>
             <span class="btn" onclick="hideScreen(this);">Play Game</span>
         </div>
     </section>
-    <section id="about" class="fullscreen hidden">
-        <div class="centered-info">
-            <h2>About Folklorama</h2>
-        </div>
-    </section> -->
 
     <script src="js/script.js"></script>
 </body>
