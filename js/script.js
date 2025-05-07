@@ -1,5 +1,5 @@
 // Game functionality
-// Taken from https://www.youtube.com/watch?v=xWdkt6KSirw
+// Basis borrowed from https://www.youtube.com/watch?v=xWdkt6KSirw with lots of extras
 
 const cardArea = document.querySelector('.card-area');
 let cards = [];
@@ -104,6 +104,19 @@ function restart() {
 
 // Dialog stuff
 
+const standbyScreen = document.querySelector('#standby-screen');
+const homeBtn = document.querySelector('#home');
+const playBtn = document.querySelector('#to-game');
+
+homeBtn.addEventListener('click', () => {
+    standbyScreen.classList.remove('hidden');
+    restart();
+});
+
+playBtn.addEventListener('click', () => {
+    standbyScreen.classList.add('hidden');
+});
+
 const about = document.querySelector('#about');
 const openAboutBtn = document.querySelector('#open-about');
 const closeAboutBtn = document.querySelector('#close-about');
@@ -116,42 +129,9 @@ closeAboutBtn.addEventListener('click', () => {
     about.close();
 });
 
+const restartBtn = document.querySelector('#restart');
 
-
-// Setting up container variables for other screens
-
-const standbyScreen = document.querySelector('#standby-screen');
-// let rulesPopup = document.querySelector('#game-rules');
-// let funFactPopup = document.querySelector('#fun-fact');
-// let winPopup = document.querySelector('#win-screen');
-// let aboutScreen = document.querySelector('#about');
-
-
-
-// Hiding screens
-
-function hideScreen(thisElement) {
-    // console.log(thisElement.parentElement.parentElement);
-    let thisScreen = thisElement.parentElement.parentElement;
-    thisScreen.classList.add('hidden');
-}
-
-// function hideOverlay(thisElement) {
-//     let thisOverlay = thisElement.parentElement.parentElement;
-//     thisOverlay.classList.add('hidden');
-// }
-
-// Showing screens 
-
-function showScreen(screen) {
-    // console.log(document.querySelector(screen));
-    let theScreen = document.querySelector(screen);
-    theScreen.classList.remove('hidden');
+restartBtn.addEventListener('click', () => {
     restart();
-}
+});
 
-// function showOverlay(screen) {
-//     // console.log(document.querySelector(screen));
-//     let theOverlay = document.querySelector(screen);
-//     theOverlay.classList.remove('hidden');
-// }

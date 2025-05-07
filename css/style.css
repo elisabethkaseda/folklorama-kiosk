@@ -13,28 +13,21 @@
 /* Variables */
 
 :root {
+    font-size: 16px;
     --background: #2F5B9D;
     --bg-mid-dark: #3B67A9;
     --bg-mid: #4273BE;
     --bg-mid-light: #4B83D7;
     --bg-light: #76A6EF;
     --text: #FFFFFF;
+    --dark: #1B1B1B;
     --neutral: #393939;
     --orange: #E98321;
-    --green: #34B233;
-    --magenta: #AC2973;
+    --green: #B8FFB7;
+    --magenta: #DB72AD;
     --light-blue: #0273CF;
-    --light-purple: #9C5FB5;
+    --light-purple: #CA89E5;
     --dark-blue: #003591;
-}
-
-h1 {
-    text-align: center;
-    font-size: clamp(4rem, 9vw, 4.6rem);
-    text-transform: uppercase;
-    letter-spacing: 2%;
-    line-height: 0.9;
-    text-shadow: 0px 4px rgba(0,0,0,0.25);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -67,12 +60,78 @@ body {
     width: 100vw;
 }
 
+h1 {
+    text-align: center;
+    font-size: clamp(4rem, 9vw, 4.6rem);
+    text-transform: uppercase;
+    letter-spacing: 2%;
+    line-height: 0.9;
+    text-shadow: 0px 0.25rem rgba(0,0,0,0.25);
+}
+
+p {
+    margin-top: 1em;
+}
+
+.btn {
+    padding: 1rem;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2%;
+    color: var(--dark);
+    background-color: var(--light-purple);
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0.25rem rgba(0,0,0,0.25);
+}
+
+#to-game {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+}
+
+#open-about {
+    background-color: var(--green);
+    margin-left: 0.5rem;
+}
+
+#close-about {
+    margin-top: 1.5rem;
+}
+
+#restart {
+    background-color: var(--magenta);
+    margin-left: 0.5rem;
+}
+
+.logo {
+    height: 4rem;
+    margin-bottom: 1rem;
+}
+
 
 /* -------------------------------------------------------------------------- */
 /*                           Styles for Each Screen                           */
 /* -------------------------------------------------------------------------- */
 
 /* Main Game Screen */
+
+.upper-clouds {
+    position: absolute;
+    height: 10vh;
+    top: 5%;
+    left: -3%;
+}
+
+.lower-clouds {
+    position: absolute;
+    height: 10vh;
+    bottom: 5%;
+    right: -3%;
+    z-index: -1;
+}
 
 #game {
     padding: 3%;
@@ -83,20 +142,10 @@ body {
     justify-content: center;
 }
 
-.header-area {
-    position: relative;
-}
-
 .subheader {
     display: block;
     font-size: clamp(2rem, 4.7vw, 2.4rem);
     letter-spacing: 11%;
-}
-
-.nav {
-    position: absolute;
-    right: 0;
-    top: 50%;
 }
 
 .card-area {
@@ -154,11 +203,74 @@ body {
     backface-visibility: hidden;
 }
 
+.footer-area {
+    margin-top: 2%;
+    padding: 0 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.character-space {
+    max-height: 20vh;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.character-space img {
+    max-height: 15vh;
+}
+
+p.speaking {
+    width: 35vw;
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--text);
+    color: var(--dark);
+    border-radius: 1rem;
+    box-shadow: 0px 0.25rem rgba(0,0,0,0.25);
+}
+
+/* Popups */
+
+#about {
+    width: 80vw;
+    height: 70vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: none;
+    border-radius: 1rem;
+}
+
+.about-info {
+    height: 100%;
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-info > div {
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-info > div > img {
+    max-width: 40%;
+}
 
 /* Standby Screen */
 
 #standby-screen {
-    background-color: var(--magenta);
+    background-color: var(--background);
     position: absolute;
     top: 0;
     left: 0;
@@ -169,23 +281,24 @@ body {
 }
 
 .centered-info {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* Popups */
+.centered-info > div {
+    height: 50%;
+    padding: 2rem;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
 
-#about {
-    width: 80vw;
-    height: 80vh;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+.centered-info > div > img {
+    max-height: 90%;
 }
 
 /* Hiding Screens */
@@ -199,6 +312,10 @@ body {
 /* -------------------------------------------------------------------------- */
 
 @media (min-width: 3000px) {
+    :root {
+        font-size: 48px;
+    }
+
 	h1 {
         font-size: 300px;
         text-shadow: 0px 20px rgba(0,0,0,0.25);
@@ -206,5 +323,18 @@ body {
 
     .subheader {
         font-size: 150px;
+    }
+
+    #about {
+        width: 60vw;
+        height: 70vh;
+    }
+
+    .about-info {
+        margin: 0 2%;
+    }
+
+    .about-info > div > img {
+        max-width: 25%;
     }
 }

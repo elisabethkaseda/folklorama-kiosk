@@ -7,29 +7,42 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <img src="images/upper-clouds.svg" alt="" class="upper-clouds">
+    <img src="images/lower-clouds.svg" alt="" class="lower-clouds">
     <!-- Main Game Screen -->
     <section id="game" class="fullscreen">
         <div class="header-area">
             <h1>Match <span class="subheader">the Flags</span></h1>
-            <div class="nav">
-                <button id="open-about">About</button>
-                <span class="btn" onclick="showScreen('#standby-screen');">Back to Home</span>
-            </div>
         </div>
         <div class="card-area">
         </div>
         <div class="footer-area">
-            
+            <div class="character-space">
+                <img src="images/talking.svg" alt="Globe character" />
+                <p class="speaking">Hello there, I’m a Folk Globe. I’ll help you to complete the game. Tap on a card to flip it!</p>
+            </div>
+            <div class="nav">
+                <button id="home" class="btn">Home</button>
+                <button id="open-about" class="btn">About</button>
+                <button id="restart" class="btn">Restart</button>
+            </div>
         </div>
     </section>
 
     <dialog id="about">
-        <div class="centered-info">
-            <p>logo</p>
+        <div class="about-info">
+            <img src="images/logo-dark.png" alt="Folklorama logo" class="logo" />
             <div>
-                <h2>About</h2>
+                <img src="images/qr-code.png" alt="QR code for Folklorama website" />
+                <div class="dialog-text">
+                    <h2>Welcome to Folklorama!</h2>
+                    <p>Welcome to Folklorama, where we celebrate and embrace cultures from around the world.</p>
+                    <p>Here, we bring people together through ethno-cultural experiences and education.</p>
+                    <p>Bring your family, friends, or partners and share in the joy of cultural experiences together.</p>
+                    <p>Play our game to win a 15% off coupon to the pavillion of your choice!</p>
+                    <button id="close-about" class="btn">Back to Game</button>
+                </div>
             </div>
-            <button id="close-about">Close</button>
         </div>
     </dialog>
 
@@ -37,9 +50,12 @@
      
     <section id="standby-screen" class="fullscreen">
         <div class="centered-info">
-            <h2>Match the Flags</h2>
-            <p>Learn about countries and win a prize!</p>
-            <span class="btn" onclick="hideScreen(this);">Play Game</span>
+            <img src="images/logo-long.png" alt="Folklorama logo" class="logo" />
+            <div>
+                <img src="images/win.svg" alt="Globe character with a grin" />
+                <h1>Match <span class="subheader">the Flags</span></h1>
+            </div>
+            <button id="to-game" class="btn">Play Now</button>
         </div>
     </section>
 
