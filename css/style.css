@@ -97,7 +97,8 @@ p {
     margin-left: 0.5rem;
 }
 
-#close-about {
+#close-about,
+#close-win {
     margin-top: 1.5rem;
 }
 
@@ -162,7 +163,7 @@ p {
     width: 100%;
     border-radius: 0.5rem;
     background-color: var(--neutral);
-    border: 0.3rem solid #66F065;
+    border: 0.3rem solid var(--green);
     position: relative;
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
@@ -247,6 +248,19 @@ p.speaking {
     border-radius: 1rem;
 }
 
+#win {
+    width: 60vw;
+    height: 60vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: none;
+    border-radius: 1rem;
+}
+
 .about-info {
     height: 100%;
     margin: 0 5%;
@@ -264,7 +278,13 @@ p.speaking {
 }
 
 .about-info > div > img {
-    max-width: 40%;
+    max-width: 35%;
+}
+
+#about::backdrop,
+#win::backdrop {
+    background-color: var(--dark);
+    opacity: 0.5;
 }
 
 /* Standby Screen */
@@ -301,6 +321,74 @@ p.speaking {
     max-height: 90%;
 }
 
+.decor-upper-clouds {
+    position: absolute;
+    height: 10vh;
+    top: 5%;
+    left: -3%;
+}
+
+.decor-lower-clouds {
+    position: absolute;
+    height: 10vh;
+    bottom: 5%;
+    right: -3%;
+}
+
+.decor-one {
+    width: 12vw;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    left: -2%;
+    transform: rotate(15deg);
+}
+
+.decor-two {
+    width: 15vw;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    right: -2%;
+    transform: rotate(-12deg);
+}
+
+.decor-three {
+    width: 14vw;
+    height: auto;
+    position: absolute;
+    top: 8%;
+    left: 15%;
+    transform: rotate(-8deg);
+}
+
+.decor-four {
+    width: 13vw;
+    height: auto;
+    position: absolute;
+    top: -3%;
+    right: 20%;
+    transform: rotate(10deg);
+}
+
+.decor-five {
+    width: 15vw;
+    height: auto;
+    position: absolute;
+    bottom: -2%;
+    left: 10%;
+    transform: rotate(-32deg);
+}
+
+.decor-six {
+    width: 12vw;
+    height: auto;
+    position: absolute;
+    bottom: -2%;
+    right: 20%;
+    transform: rotate(18deg);
+}
+
 /* Hiding Screens */
 
 .hidden {
@@ -328,6 +416,11 @@ p.speaking {
     #about {
         width: 60vw;
         height: 70vh;
+    }
+
+    #win {
+        width: 45vw;
+        height: 50vh;
     }
 
     .about-info {
