@@ -1,23 +1,53 @@
 // Game functionality
 // Basis borrowed from https://www.youtube.com/watch?v=xWdkt6KSirw with lots of extras
 
+const cardData = [
+    {
+        "image": "./images/brazil.svg",
+        "name": "Brazil"
+    },
+    {
+        "image": "./images/chile.svg",
+        "name": "Chile"
+    },
+    {
+        "image": "./images/china.svg",
+        "name": "China"
+    },
+    {
+        "image": "./images/ethiopia.svg",
+        "name": "Ethiopia"
+    },
+    {
+        "image": "./images/india.svg",
+        "name": "India"
+    },
+    {
+        "image": "./images/japan.svg",
+        "name": "Japan"
+    },
+    {
+        "image": "./images/metis-nation.svg",
+        "name": "Metis Nation"
+    },
+    {
+        "image": "./images/philippines.svg",
+        "name": "Philippines"
+    },
+    {
+        "image": "./images/ukraine.svg",
+        "name": "Ukraine"
+    }
+]
+
 const cardArea = document.querySelector('.card-area');
-let cards = [];
+const cards = [...cardData, ...cardData];
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
 
-fetch('../data/cards.json')
-    .then(
-        response => response.json()
-    )
-    .then(
-        data => {
-            cards = [...data, ...data];
-            shuffleCards();
-            generateCards();
-        }
-    );
+shuffleCards();
+generateCards();
 
 function shuffleCards() {
     let currentIndex = cards.length,
