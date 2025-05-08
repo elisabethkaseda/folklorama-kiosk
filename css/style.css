@@ -37,7 +37,7 @@
 body {
     position: relative;
     height: 100dvh;
-    width: 100dvw;
+    width: 100vw;
     overflow: hidden;
 
     background: linear-gradient(
@@ -57,7 +57,7 @@ body {
 
 .fullscreen {
     height: 100dvh;
-    width: 100dvw;
+    width: 100vw;
 }
 
 h1 {
@@ -224,7 +224,7 @@ p {
 }
 
 p.speaking {
-    width: 35dvw;
+    width: 35vw;
     margin: 0;
     padding: 1rem;
     background-color: var(--text);
@@ -236,7 +236,7 @@ p.speaking {
 /* Popups */
 
 #about {
-    width: 80dvw;
+    width: 80vw;
     height: 70dvh;
     position: absolute;
     top: 0;
@@ -249,7 +249,7 @@ p.speaking {
 }
 
 #win {
-    width: 60dvw;
+    width: 60vw;
     height: 60dvh;
     position: absolute;
     top: 0;
@@ -336,7 +336,7 @@ p.speaking {
 }
 
 .decor-one {
-    width: 12dvw;
+    width: 12vw;
     height: auto;
     position: absolute;
     top: 40%;
@@ -345,7 +345,7 @@ p.speaking {
 }
 
 .decor-two {
-    width: 15dvw;
+    width: 15vw;
     height: auto;
     position: absolute;
     top: 40%;
@@ -354,7 +354,7 @@ p.speaking {
 }
 
 .decor-three {
-    width: 14dvw;
+    width: 14vw;
     height: auto;
     position: absolute;
     top: 8%;
@@ -363,7 +363,7 @@ p.speaking {
 }
 
 .decor-four {
-    width: 13dvw;
+    width: 13vw;
     height: auto;
     position: absolute;
     top: -3%;
@@ -372,7 +372,7 @@ p.speaking {
 }
 
 .decor-five {
-    width: 15dvw;
+    width: 15vw;
     height: auto;
     position: absolute;
     bottom: -2%;
@@ -381,7 +381,7 @@ p.speaking {
 }
 
 .decor-six {
-    width: 12dvw;
+    width: 12vw;
     height: auto;
     position: absolute;
     bottom: -2%;
@@ -414,12 +414,12 @@ p.speaking {
     }
 
     #about {
-        width: 60dvw;
+        width: 60vw;
         height: 70dvh;
     }
 
     #win {
-        width: 45dvw;
+        width: 45vw;
         height: 50dvh;
     }
 
