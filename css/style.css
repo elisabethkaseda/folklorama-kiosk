@@ -36,8 +36,8 @@
 
 body {
     position: relative;
-    height: 100vh;
-    width: 100vw;
+    height: 100dvh;
+    width: 100dvw;
     overflow: hidden;
 
     background: linear-gradient(
@@ -56,8 +56,8 @@ body {
 }
 
 .fullscreen {
-    height: 100vh;
-    width: 100vw;
+    height: 100dvh;
+    width: 100dvw;
 }
 
 h1 {
@@ -121,14 +121,14 @@ p {
 
 .upper-clouds {
     position: absolute;
-    height: 10vh;
+    height: 10dvh;
     top: 5%;
     left: -3%;
 }
 
 .lower-clouds {
     position: absolute;
-    height: 10vh;
+    height: 10dvh;
     bottom: 5%;
     right: -3%;
     z-index: -1;
@@ -213,18 +213,18 @@ p {
 }
 
 .character-space {
-    max-height: 20vh;
+    max-height: 20dvh;
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
 .character-space img {
-    max-height: 15vh;
+    max-height: 15dvh;
 }
 
 p.speaking {
-    width: 35vw;
+    width: 35dvw;
     margin: 0;
     padding: 1rem;
     background-color: var(--text);
@@ -236,8 +236,8 @@ p.speaking {
 /* Popups */
 
 #about {
-    width: 80vw;
-    height: 70vh;
+    width: 80dvw;
+    height: 70dvh;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -249,8 +249,8 @@ p.speaking {
 }
 
 #win {
-    width: 60vw;
-    height: 60vh;
+    width: 60dvw;
+    height: 60dvh;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -323,20 +323,20 @@ p.speaking {
 
 .decor-upper-clouds {
     position: absolute;
-    height: 10vh;
+    height: 10dvh;
     top: 5%;
     left: -3%;
 }
 
 .decor-lower-clouds {
     position: absolute;
-    height: 10vh;
+    height: 10dvh;
     bottom: 5%;
     right: -3%;
 }
 
 .decor-one {
-    width: 12vw;
+    width: 12dvw;
     height: auto;
     position: absolute;
     top: 40%;
@@ -345,7 +345,7 @@ p.speaking {
 }
 
 .decor-two {
-    width: 15vw;
+    width: 15dvw;
     height: auto;
     position: absolute;
     top: 40%;
@@ -354,7 +354,7 @@ p.speaking {
 }
 
 .decor-three {
-    width: 14vw;
+    width: 14dvw;
     height: auto;
     position: absolute;
     top: 8%;
@@ -363,7 +363,7 @@ p.speaking {
 }
 
 .decor-four {
-    width: 13vw;
+    width: 13dvw;
     height: auto;
     position: absolute;
     top: -3%;
@@ -372,7 +372,7 @@ p.speaking {
 }
 
 .decor-five {
-    width: 15vw;
+    width: 15dvw;
     height: auto;
     position: absolute;
     bottom: -2%;
@@ -381,7 +381,7 @@ p.speaking {
 }
 
 .decor-six {
-    width: 12vw;
+    width: 12dvw;
     height: auto;
     position: absolute;
     bottom: -2%;
@@ -414,13 +414,13 @@ p.speaking {
     }
 
     #about {
-        width: 60vw;
-        height: 70vh;
+        width: 60dvw;
+        height: 70dvh;
     }
 
     #win {
-        width: 45vw;
-        height: 50vh;
+        width: 45dvw;
+        height: 50dvh;
     }
 
     .about-info {
